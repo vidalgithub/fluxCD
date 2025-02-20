@@ -3,7 +3,7 @@ replicaCount: 2
 
 service:
   type: NodePort
-  tnodePort: 30015
+  nodePort: 30015
 
 namespace:
   name: 5-demo
