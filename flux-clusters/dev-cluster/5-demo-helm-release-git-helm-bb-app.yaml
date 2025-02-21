@@ -16,4 +16,5 @@ spec:
   targetNamespace: 5-demo
   valuesFrom:
   - kind: ConfigMap
-    name: 5-demo-values.yaml
+    name: 5-demo-values
+    valuesKey: 5-demo-values.yaml
