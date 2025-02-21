@@ -14,15 +14,6 @@ spec:
         name: 5-demo-source-git-bb-app
   interval: 30s
   targetNamespace: 5-demo
-  values:
-    labels:
-      app:
-        env: dev
-        name: block-buster
-        version: 7.5.0
-    namespace:
-      name: 5-demo
-    replicaCount: 2
-    service:
-      nodePort: 30015
-      type: NodePort
+  valuesFrom:
+  - kind: ConfigMap
+    name: 5-demo-values.yaml
