@@ -1,0 +1,14 @@
+replicaCount: 5
+
+service:
+  type: ClusterIP
+  port: 80
+
+# namespace:
+#   name: default
+
+labels:
+  app:
+    name: nginx
+    version: 1.0.0
+    env: prod

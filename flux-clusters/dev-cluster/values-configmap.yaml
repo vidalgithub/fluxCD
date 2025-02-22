@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: 5-demo-values
+  namespace: flux-system
+data:
+  5-demo-values: |  # Key inside the ConfigMap
+    replicaCount: 1
+
+    service:
+      type: NodePort
+      nodePort: 30068
+
+    namespace:
+      name: 5-demo
+
+    labels:
+      app:
+        name: block-buster
+        version: 7.5.0
+        env: dev
